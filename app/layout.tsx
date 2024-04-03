@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        
+      <link rel="stylesheet" href="https://cdn.flowbite.com/flowbite.min.css"/>
+<script src="https://cdn.flowbite.com/flowbite.min.js"></script>
+
         {children}
-        
+        {/* <script src="../path/to/flowbite/dist/flowbite.min.js"></script> */}
+        {/* <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></Script> */}
       </body>
     </html>
   );
